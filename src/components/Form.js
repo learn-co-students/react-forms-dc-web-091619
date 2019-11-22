@@ -7,12 +7,14 @@ export default class Form extends React.Component {
         <form onSubmit={this.props.handleSubmit}>
           <input
             type="text"
-            onChange={event => this.props.handleFirstNameChange(event)}
+            onChange={event => this.props.handleChange(event)}
+            name = "firstName"
             value={this.props.formData.firstName}
           />
           <input
             type="text"
-            onChange={event => this.props.handleLastNameChange(event)}
+            onChange={event => this.props.handleChange(event)}
+            name = "lastName"
             value={this.props.formData.lastName}
           />
           <input type="submit"></input>

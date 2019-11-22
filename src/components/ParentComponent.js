@@ -9,17 +9,23 @@ export default class ParentComponent extends React.Component{
         submittedData: []
       }
      
-      handleFirstNameChange = event => {
-        this.setState({
-          firstName: event.target.value
-        })
+      handleChange = (event) => {
+          this.setState({
+              [event.target.name]: event.target.value
+          })
       }
+
+    //   handleFirstNameChange = event => {
+    //     this.setState({
+    //       firstName: event.target.value
+    //     })
+    //   }
      
-      handleLastNameChange = event => {
-        this.setState({
-          lastName: event.target.value
-        })
-      }
+    //   handleLastNameChange = event => {
+    //     this.setState({
+    //       lastName: event.target.value
+    //     })
+    //   }
 
       listOfSubmissions = () => {
             return this.state.submittedData.map(data=> {
@@ -40,8 +46,7 @@ export default class ParentComponent extends React.Component{
           <Form
             formData={this.state}
             handleSubmit={this.handleSubmit}
-            handleFirstNameChange={this.handleFirstNameChange}
-            handleLastNameChange={this.handleLastNameChange}
+            handleChange = {this.handleChange}
           />
           <DisplayData formData={this.state} />
           {this.listOfSubmissions()}
