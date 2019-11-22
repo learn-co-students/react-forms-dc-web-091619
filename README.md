@@ -471,10 +471,10 @@ interesting doors for us. We could, for instance, create another component, a
 sibling of `Form`, that live displays our form data.
 
 ```js
-// src/components/DisplayData
-import React from 'react';
+DisplayData.js
+impDisplayData.jsrom 'react';
 
-class DisplayData extends React.Component {
+class DisplayData extDisplayData.jsComponent {
   render() {
     return (
       <div>
@@ -486,17 +486,15 @@ class DisplayData extends React.Component {
 }
 
 export default DisplayData
-```
-
-And adding it alongside `Form` (also wrapping both in a `div`:
+```DisplayData.jsg it alongside `Form` (also wrapping both in a `div`:
 
 ```js
 // src/components/ParentComponent
 import React from 'react';
 import Form from './Form'
-import DisplayData from './DisplayData'
+import DisplayData froDisplayData.jsta.js
 
-class ParentComponent extends React.Component {
+clDisplayData.jsomponent extends React.Component {
   ...
   render() {
     return (
@@ -506,7 +504,7 @@ class ParentComponent extends React.Component {
           handleFirstNameChange={this.handleFirstNameChange}
           handleLastNameChange={this.handleLastNameChange}
         />
-        <DisplayData formData={this.state} />
+        <DisplayData formDisplayData.jsstate} />
       </div>
     )
   }
@@ -613,9 +611,9 @@ Here is the full, final code using this new function:
 // src/components/ParentComponent
 import React from 'react';
 import Form from './Form'
-import DisplayData from './DisplayData'
+import DisplayData fromDisplayData.jsData'
 
-class ParentComponent extends React.Component {
+clDisplayData.jsomponent extends React.Component {
   state = {
     firstName: "",
     lastName: "",
@@ -634,7 +632,7 @@ class ParentComponent extends React.Component {
           formData={this.state}
           handleChange={this.handleChange}
         />
-        <DisplayData formData={this.state} />
+        <DisplayData formDisplayData.jsstate} />
       </div>
     )
   }
@@ -673,10 +671,9 @@ export default Form;
 ```
 
 ```js
-// src/components/DisplayData.js
-import React from 'react';
+DisplayDataport React from 'react';
 
-class DisplayData extends React.Component {
+class DisplayData exteDisplayData.jsomponent {
   render() {
     return (
       <div>
@@ -689,9 +686,7 @@ class DisplayData extends React.Component {
 
 export default DisplayData
 ```
-
-```js
-// src/index.js
+DisplayData.jsrc/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ParentComponent from './components/ParentComponent';
